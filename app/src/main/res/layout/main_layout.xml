@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ads="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              >
+
+    <TextView
+        android:text="Open Map"
+        android:id="@+id/button"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/flat_selector"
+        android:ellipsize="end"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:clickable="true"
+        android:layout_weight="1"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll"
+        android:layout_weight="4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lat:"
+                android:id="@+id/latText"
+                android:maxLength="20"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lon:"
+                android:maxLength="20"
+                android:id="@+id/lonText"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Address:"
+        android:id="@+id/addressText"
+        android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        >
+    </com.google.android.gms.ads.AdView>
+
+
+    <TextView
+        android:text="Copy Address to Clipboard"
+        android:id="@+id/copyButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/flat_selector"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:clickable="true"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:text="Find Address on Map"
+        android:id="@+id/returnMapButton"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/flat_selector"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:layout_weight="1"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Previous Locations"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:clickable="true"
+        android:background="@drawable/flat_selector"
+        android:textColor="@android:color/white"
+        android:id="@+id/previousLocation"
+        android:gravity="center"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:clickable="true"
+        android:background="@drawable/flat_selector"
+        android:textColor="@android:color/white"
+        android:id="@+id/logOut"
+        android:gravity="center"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+
